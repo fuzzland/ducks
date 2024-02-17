@@ -1,0 +1,19 @@
+{
+	"name": "vanilla-starter-template",
+	"version": "0.1.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.4",
+		"vite": "^5.0.0"
+	},
+	"dependencies": {
+		"@wagmi/core": "^1.4.2",
+		"@web3modal/wagmi": "3.5.7",
+		"viem": "^1.13.1"
+	}
+}
