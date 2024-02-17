@@ -76,3 +76,254 @@ header {
 	position: fixed;
 	width: 100%;
 }
+
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.leaderboard {
+	font: 25px 'VT323', monospace;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100;
+}
+
+.buttons {
+	font: 25px 'VT323', monospace;
+	border-radius: 10px;
+	padding: 15px;
+	background-color: #000;
+	color: #fff;
+	font-weight: 800;
+	cursor: pointer;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.buttons_text {
+	font: 25px 'VT323', monospace;
+	border-radius: 10px;
+	padding: 15px;
+	background-color: #000;
+	color: #fff;
+	font-weight: 800;
+	cursor: pointer;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.scoreboard {
+	font: 25px 'VT323', monospace;
+	position: absolute;
+	top: 18%;
+	right: 10px;
+	z-index: 100;
+	background-color: whitesmoke;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 5px;
+	padding: 10px;
+}
+
+
+.barn {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 50%;
+	max-width: 25em;
+	z-index: 10;
+	transition: all 0.1s;
+}
+
+.barn:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+.store {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.store-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.barn-dialog {
+	font: 25px 'VT323', monospace;
+	position: absolute;
+	height: max-content;
+	overflow-y: scroll;
+	width: 80%;
+	max-width: 1200px;
+	max-height: 600px;
+	z-index: 100000;
+	background-color: white;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #000;
+	display: none;
+	text-align: center;
+}
+
+.close {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	cursor: pointer;
+	font-size: 1.5em;
+}
+
+.nav {
+	font-family: 'VT323', monospace;
+	font-weight: 800;
+	background-color: whitesmoke;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 100;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 5px;
+}
+
+.nav-title {
+	display: flex;
+	align-items: center;
+	padding: 10px 25px;
+}
+
+#ducks-illustraation {
+	max-width: 200px;
+	overflow-x: scroll;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	height: 100%;
+	font-size: 40px;
+}
+
+.gift {
+	position: absolute;
+	transition: all 1s;
+	z-index: 20;
+	height: 5em;
+}
+
+.duck {
+	position: absolute;
+	transition: all 7s;
+	z-index: 20;
+	cursor: pointer;
+
+}
+
+@media screen and (max-width: 600px) {
+	.nav {
+		font: 25px 'VT323', monospace;
+		border-width: 3px;
+		right: 10px;
+	}
+
+	.nav-title {
+		padding: 5px 10px;
+	}
+
+	.gift {
+		height: 3em;
+	}
+
+	.duck {
+		transition: all 10s;
+	}
+
+	.leaderboard {
+		font: 10px 'VT323', monospace;
+	}
+
+	.barn-dialog {
+		width: calc(100% - 40px);
+	}
+}
+
+
+.duck-illustration {
+	margin-left: -15px;
+}
+
+.poop-count {}
+
+.background {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#ducks {
+	overflow: hidden;
+}
+
+
+
+.duck-clicked {
+	animation: squeeze 0.5s ease-in-out forwards;
+}
+
+.poop {
+	position: absolute;
+	opacity: 0;
+	transition: all 0.2s;
+}
+
+.poop-appear {
+	opacity: 1;
+}
+
+@keyframes poop-appear {
+	0% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes poop-disappear {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.5);
+	}
+}
+
+@keyframes squeeze {
+	0% {
+		transform: scaleX(1) scaleY(1);
+		/* Initial state */
+	}
+
+	50% {
+		transform: scaleX(1.2) scaleY(0.8);
+		/* Squeeze state (wider and shorter) */
+	}
+
+	100% {
+		transform: scaleX(1) scaleY(1);
+		/* Return to initial state */
+	}
+}
